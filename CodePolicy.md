@@ -43,6 +43,7 @@
 
 ----------
 **Нейминг**
+
 *Названия файлов и папок* в **нижнем регистре** - если иного не требует система, например, если папка является папкой класса в исходных кодах, она должна называться как этот класс
 
 *Названия переменных* - Camel Case - первое слово в названии переменной с маленькой, остальные слова с большой без разделителей, если название переменной получается длинным, то приветствуется сокращение слов составляющих название переменной до согласной буквы. Не рекомендуется выкидывать слова из названия совсем. Приоритетом является понятность, на втором месте длинна.
@@ -71,18 +72,17 @@
     	}
     	void setPrice(int price)
     	{
-	    	if(!is_correct_price(price))
-		    	throw std::invalid_argument("price is incorrect");
+		if(!is_correct_price(price))
+			throw std::invalid_argument("price is incorrect");
 		    	
-	    	_price = price;
+		_price = price;
     	}
     private:
     	bool is_correct_price(int price) const
     	{
-	    	if(price >= 0)
-		    	return true;
-		    	
-	    	return false;
+		if(price >= 0)
+			return true;
+		return false;
     	}
     private:
     	int _price;
