@@ -65,7 +65,7 @@
     {
     public:
     	SomeClass() { ... }
-    	void price() const 
+    	int price() const 
     	{
     		return _price;
     	}
